@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Go Application</title>
+    <script src="/static/js/htmx.min.js"></script>
+    <script src="/static/js/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <h1>Hello, Go!</h1>
+    <p>This is a simple Go application with HTMX and Alpine.js.</p>
+
+    <div x-data="{ count: 0 }">
+      <button x-on:click="count++">
+        Alpine.js Counter: <span x-text="count"></span>
+      </button>
+    </div>
+
+    <div>
+      <button hx-get="/api/ping" hx-target="#result" hx-swap="innerHTML">
+        Test HTMX
+      </button>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
