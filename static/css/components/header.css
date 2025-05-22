@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header__menu {
+  display: none;
+}
+
+.header__bars {
+  color: var(--clr-slate600);
+  width: var(--size-2xl);
+  height: var(--size-2xl);
+  display: block;
+}
+/* xs */
+/* @media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 2em;
+  }
+
+  .header__link {
+    text-decoration: none;
+    color: var(--clr-slate600);
+    font-size: var(--size-lg);
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+
+  .header__link:hover,
+  .header__link:focus {
+    color: var(--clr-green-light); /* or #fff if preferred */
+  }
+
+  .header__link::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--clr-green-light); /* or #fff if preferred */
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  .header__link:hover::after,
+  .header__link:focus::after {
+    width: 100%;
+    left: 0%;
+  }
+
+  .header__line {
+    border: 1px solid var(--clr-slate600);
+    padding-top: 1.5em;
+  }
+
+  .header__sun {
+    display: block;
+    color: var(--clr-slate600);
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+  }
+
+  .header__bars {
+    display: none;
+  }
+
+  .header__resume {
+    font-size: var(--size-lg);
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .header__link {
+    font-size: var(--size-lg);
+  }
+
+  .header__sun {
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+  }
+
+  .header__bars {
+    display: none;
+  }
+
+  .header__resume {
+    font-size: var(--size-2xl);
+  }
+}
+
+/* xl */
+/* @media (min-width: 1080px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */

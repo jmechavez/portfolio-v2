@@ -1,3 +1,30 @@
+:root {
+  --clr-dark: #22201b;
+  --clr-light: #e4e2dd;
+  --clr-slate400: #bcb9b4;
+  --clr-slate600: #7d7a75;
+  --clr-slate800: #3f3d3a;
+  --clr-green-dark: #4d6837;
+  --clr-green-light: #adc897;
+
+  /* Sizes (using a 1.25 modular scale) */
+  --size-xxs: 0.5rem; /* 8px */
+  --size-xs: 0.625rem; /* 10px */
+  --size-sm: 0.75rem; /* 12px */
+  --size-md: 1rem; /* 16px */
+  --size-lg: 1.25rem; /* 20px */
+  --size-xl: 1.5rem; /* 24px */
+  --size-2xl: 1.875rem; /* 30px */
+  --size-3xl: 2.25rem; /* 36px */
+  --size-4xl: 3rem; /* 48px */
+  --size-5xl: 3.75rem; /* 60px */
+  --size-6xl: 4.5rem; /* 72px */
+  --size-7xl: 6rem; /* 96px */
+  --size-8xl: 7.5rem; /* 120px */
+  --size-9xl: 9rem; /* 144px */
+  --size-10xl: 12rem; /* 192px */
+}
+
 * {
   margin: 0;
   line-height: calc(1em + 0.5rem);
@@ -5,5 +32,43 @@
 
 html {
   scroll-behavior: smooth;
-  
 }
+
+body {
+  font-family: "General Sans", sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: var(--clr-green-light);
+}
+
+strong {
+  color: var(--clr-green-dark);
+}
+
+/* --text: #22201b;
+--background: #e4e2dd;
+--primary: #2b2b2b;
+--secondary: #2b2b2b;
+--accent: #4d6837; */
