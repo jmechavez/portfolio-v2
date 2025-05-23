@@ -1,0 +1,139 @@
+.welcome {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.welcome__image {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.welcome__image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.welcome__subtitle {
+  font-size: var(--size-lg);
+  color: var(--clr-slate600);
+  line-height: 1.2;
+}
+
+.welcome__title {
+  font-size: var(--size-2xl);
+  color: var(--clr-slate400);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+}
+
+.welcome__description {
+  font-size: var(--size-md);
+  color: var(--clr-slate600);
+  max-width: 60ch;
+}
+
+.welcome_btn {
+  text-transform: capitalize;
+  font-size: var(--size-md);
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .welcome {
+    gap: 1.5rem;
+  }
+
+  .welcome__image {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .welcome__subtitle {
+    font-size: var(--size-xl);
+  }
+
+  .welcome__title {
+    font-size: var(--size-3xl);
+  }
+
+  .welcome__description {
+    font-size: var(--size-lg);
+  }
+
+  .welcome_btn {
+    text-transform: capitalize;
+    font-size: var(--size-lg);
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+  .welcome__image {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .welcome__subtitle {
+    font-size: var(--size-2xl);
+  }
+
+  .welcome__title {
+    font-size: var(--size-5xl);
+  }
+
+  .welcome__description {
+    font-size: var(--size-xl);
+  }
+
+  .welcome_btn {
+    text-transform: capitalize;
+    font-size: var(--size-xl);
+  }
+}
+
+/* xl */
+@media (min-width: 1080px) {
+  .welcome {
+    gap: 2rem;
+  }
+
+  .welcome__image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .welcome__subtitle {
+    font-size: var(--size-4xl);
+  }
+
+  .welcome__title {
+    font-size: var(--size-7xl);
+  }
+
+  .welcome__description {
+    font-size: var(--size-2xl);
+  }
+
+  .welcome_btn {
+    text-transform: capitalize;
+    font-size: var(--size-2xl);
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
