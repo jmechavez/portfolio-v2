@@ -1,191 +1,177 @@
 <!DOCTYPE html>
 <html lang="en" x-data="{}">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/static/css/modern-normalize.css" />
-    <title>My Go Application</title>
-    <script src="/static/js/htmx.min.js"></script>
-    <script src="/static/js/alpine.min.js" defer></script>
-    <script src="/static/js/main.js"></script>
-    <!-- Removed type="module" -->
-  </head>
-  <body x-init="loadStylesheets()">
-    <header class="header container">
-      <nav>
-        <ul class="header__menu">
-          <li><a class="header__link" href="#about">About</a></li>
-          <li><a class="header__link" href="#featured">Work</a></li>
-          <li><a class="header__link" href="#contact">Contact</a></li>
-          <li class="header__line"></li>
-          <li>
-            <button class="header__github">
-              <svg
-                role="img"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                />
-              </svg>
-            </button>
-          </li>
-          <li>
-            <button class="header__sun">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="{1.5}"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-                />
-              </svg>
-            </button>
-          </li>
-          <li>
-            <a class="header__resume btn" href="#">Resume</a>
-          </li>
-        </ul>
-        <button class="header__bars">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </nav>
-    </header>
 
-    <main>
-      <section class="welcome container">
-        <img
-          class="welcome__image"
-          src="/static/images/photos/Image002.png"
-          alt="e"
-        />
-        <h2 class="welcome__subtitle">
-          Need a backend that just works — and keeps working?
-        </h2>
-        <h1 class="welcome__title">John Michael Echavez</h1>
-        <p class="welcome__description">
-          I build fast, clean, and scalable backend systems in
-          <span style="color: #00add8; font-weight: bold">Go</span>. From
-          developer-friendly APIs to reliable data integrity, I simplify complex
-          needs into solid code — making your architecture smoother and
-          worry-free ✅.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/modern-normalize.css" />
+  <title>My Go Application</title>
+  <script src="/static/js/htmx.min.js"></script>
+  <script src="/static/js/alpine.min.js" defer></script>
+  <script src="/static/js/main.js"></script>
+  <!-- Removed type="module" -->
+</head>
+
+<body x-init="loadStylesheets()">
+  <header class="header container">
+    <nav>
+      <ul class="header__menu">
+        <li><a class="header__link" href="#about">About</a></li>
+        <li><a class="header__link" href="#featured">Work</a></li>
+        <li><a class="header__link" href="#contact">Contact</a></li>
+        <li class="header__line"></li>
+        <li>
+          <button class="header__github">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="header__sun">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="{1.5}" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a class="header__resume btn" href="#">Resume</a>
+        </li>
+      </ul>
+      <button class="header__bars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <>
+    <section class="welcome container">
+      <img class="welcome__image" src="/static/images/photos/Image002.png" alt="e" />
+      <h2 class="welcome__subtitle">
+        Need a backend that just works — and keeps working?
+      </h2>
+      <h1 class="welcome__title">John Michael Echavez</h1>
+      <p class="welcome__description">
+        I build fast, clean, and scalable backend systems in
+        <span style="color: #00add8; font-weight: bold">Go</span>. From
+        developer-friendly APIs to reliable data integrity, I simplify complex
+        needs into solid code — making your architecture smoother and
+        worry-free ✅.
+      </p>
+      <a class="welcome__btn btn" href="#">Reach Out</a>
+    </section>
+
+    <section class="about container section">
+      <div class="about__content">
+        <h2 class="about__title">About Me</h2>
+        <p class="about__description">
+          I'm an aspiring backend developer with a strong passion for building
+          clean and reliable systems. I may be new to the field, but I'm
+          focused, hands-on, and always learning.
+          <br /><br />
+          My recent projects include creating simple APIs with Go,
+          experimenting with PostgreSQL databases, and integrating dynamic
+          frontend behavior using HTMX and Alpine.js. I enjoy breaking down
+          complex problems and turning them into working code that serves real
+          purpose.
+          <br /><br />
+          I'm currently looking for an opportunity where I can grow as a
+          backend developer, contribute to real-world systems, and learn from
+          experienced engineers.
         </p>
-        <a class="welcome__btn btn" href="#">Reach Out</a>
-      </section>
 
-      <section class="about container section">
-        <div class="about__content">
-          <h2 class="about__title">About Me</h2>
-          <p class="about__description">
-            I'm an aspiring backend developer with a strong passion for building
-            clean and reliable systems. I may be new to the field, but I'm
-            focused, hands-on, and always learning.
-            <br /><br />
-            My recent projects include creating simple APIs with Go,
-            experimenting with PostgreSQL databases, and integrating dynamic
-            frontend behavior using HTMX and Alpine.js. I enjoy breaking down
-            complex problems and turning them into working code that serves real
-            purpose.
-            <br /><br />
-            I'm currently looking for an opportunity where I can grow as a
-            backend developer, contribute to real-world systems, and learn from
-            experienced engineers.
-          </p>
+        <hr class="about__hr" />
 
-          <hr class="about__hr" />
+        <h3 class="about__subtitle">Technologies</h3>
+        <div class="about__ul-container">
+          <ul class="about__ul">
+            <li><a class="about__list" href="#">Go</a></li>
+            <li><a class="about__list" href="#">HTMX</a></li>
+            <li><a class="about__list" href="#">AlpineJS</a></li>
+            <li><a class="about__list" href="#">HTML</a></li>
+          </ul>
+          <ul class="about__ul">
+            <li><a class="about__list" href="#">CSS</a></li>
+            <li><a class="about__list" href="#">PostgreSQL</a></li>
+            <li><a class="about__list" href="#">RESTful APIs</a></li>
+            <li><a class="about__list" href="#">Docker</a></li>
+          </ul>
+        </div>
+      </div>
 
-          <h3 class="about__subtitle">Technologies</h3>
-          <div class="about__ul-container">
-            <ul class="about__ul">
-              <li><a class="about__list" href="#">Go</a></li>
-              <li><a class="about__list" href="#">HTMX</a></li>
-              <li><a class="about__list" href="#">AlpineJS</a></li>
-              <li><a class="about__list" href="#">HTML</a></li>
-            </ul>
-            <ul class="about__ul">
-              <li><a class="about__list" href="#">CSS</a></li>
-              <li><a class="about__list" href="#">PostgreSQL</a></li>
-              <li><a class="about__list" href="#">RESTful APIs</a></li>
-              <li><a class="about__list" href="#">Docker</a></li>
-            </ul>
+      <div>
+        <img class="about__image" src="/static/images/photos/Image003.png" alt="e" />
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <h1 class="contact-title">Contact</h1>
+        <p class="contact-description">Insert</p>
+
+        <form action="#" method="post" aria-label="Contact form" class="contact-form">
+          <div class="form-group">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required class="form-input" />
           </div>
-        </div>
 
-        <div>
-          <img
-            class="about__image"
-            src="/static/images/photos/Image003.png"
-            alt="e"
-          />
-        </div>
-      </section>
-    </main>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" required class="form-input" />
+          </div>
 
-    <!-- Site footer -->
-    <footer class="footer">
-      <div>
-        <nav>
-          <ul class="footer__links container">
-            <li><a class="footer__link" href="#about">About</a></li>
-            <li><a class="footer__link" href="#featured">Work</a></li>
-            <li><a class="footer__link" href="#contact">Contact</a></li>
-            <li><a class="footer__link" href="#">Resume</a></li>
-          </ul>
-        </nav>
-        <nav>
-          <ul>
-            <button class="footer__button">
-              <svg
-                width="80"
-                height="80"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                transform="rotate(0 0 0)"
-              >
-                <path
-                  d="M19.7065 3H4.34844C3.62264 3 3.04199 3.58065 3.04199 4.30645V19.6935C3.04199 20.3903 3.62264 21 4.34844 21H19.6485C20.3743 21 20.9549 20.4194 20.9549 19.6935V4.27742C21.013 3.58065 20.4323 3 19.7065 3ZM8.35491 18.3H5.71297V9.73548H8.35491V18.3ZM7.01942 8.54516C6.14846 8.54516 5.4807 7.84839 5.4807 7.00645C5.4807 6.16452 6.17749 5.46774 7.01942 5.46774C7.86136 5.46774 8.55813 6.16452 8.55813 7.00645C8.55813 7.84839 7.91942 8.54516 7.01942 8.54516ZM18.371 18.3H15.7291V14.1484C15.7291 13.1613 15.7001 11.8548 14.3356 11.8548C12.942 11.8548 12.7388 12.9581 12.7388 14.0613V18.3H10.0968V9.73548H12.6807V10.9258H12.7097C13.0872 10.229 13.9291 9.53226 15.2356 9.53226C17.9356 9.53226 18.4291 11.2742 18.4291 13.6548V18.3H18.371Z"
-                />
-              </svg>
-            </button>
-            <button class="footer__button">
-              <svg
-                width="80"
-                height="80"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                transform="rotate(0 0 0)"
-              >
-                <path
-                  d="M12 2.24902C6.51613 2.24902 2 6.70064 2 12.249C2 16.6361 4.87097 20.3781 8.87097 21.7329C9.3871 21.8297 9.54839 21.5071 9.54839 21.2813C9.54839 21.0555 9.54839 20.4103 9.51613 19.5393C6.74194 20.1845 6.16129 18.1845 6.16129 18.1845C5.70968 17.0555 5.03226 16.7329 5.03226 16.7329C4.12903 16.0877 5.06452 16.0877 5.06452 16.0877C6.06452 16.12 6.6129 17.12 6.6129 17.12C7.48387 18.6684 8.96774 18.2168 9.51613 17.9264C9.6129 17.2813 9.87097 16.8297 10.1613 16.5716C7.96774 16.3458 5.6129 15.4748 5.6129 11.6684C5.6129 10.5716 6.03226 9.70064 6.64516 9.02322C6.54839 8.79741 6.19355 7.76515 6.74194 6.37806C6.74194 6.37806 7.6129 6.11999 9.51613 7.41031C10.3226 7.18451 11.1613 7.05548 12.0323 7.05548C12.9032 7.05548 13.7742 7.15225 14.5484 7.41031C16.4516 6.15225 17.2903 6.37806 17.2903 6.37806C17.8387 7.73289 17.5161 8.79741 17.3871 9.02322C18.0323 9.70064 18.4194 10.6039 18.4194 11.6684C18.4194 15.4748 16.0645 16.3458 13.871 16.5716C14.2258 16.8942 14.5484 17.5393 14.5484 18.4426C14.5484 19.7974 14.5161 20.8619 14.5161 21.1845C14.5161 21.4426 14.7097 21.7329 15.1935 21.6361C19.129 20.3135 22 16.6039 22 12.1845C21.9677 6.70064 17.4839 2.24902 12 2.24902Z"
-                />
-              </svg>
-            </button>
-          </ul>
-        </nav>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
+          </div>
+
+          <div class="form-group form-submit">
+            <button type="submit" class="form-button">Send</button>
+          </div>
+        </form>
       </div>
-      <div>
-        <h6>© John Michael Echavez</h6>
-      </div>
-    </footer>
-  </body>
+    </section>
+
+  </>
+
+  <!-- Site footer -->
+  <footer class="footer">
+    <div>
+      <nav>
+        <ul class="footer__links">
+          <li><a class="footer__link" href="#about">About</a></li>
+          <li><a class="footer__link" href="#featured">Work</a></li>
+          <li><a class="footer__link" href="#contact">Contact</a></li>
+          <li><a class="footer__link" href="#">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+      <nav class="footer__buttons" aria-label="Social media links">
+        <a class="footer__button" href="#" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path
+              d="M19.7065 3H4.34844C3.62264 3 3.04199 3.58065 3.04199 4.30645V19.6935C3.04199 20.3903 3.62264 21 4.34844 21H19.6485C20.3743 21 20.9549 20.4194 20.9549 19.6935V4.27742C21.013 3.58065 20.4323 3 19.7065 3ZM8.35491 18.3H5.71297V9.73548H8.35491V18.3ZM7.01942 8.54516C6.14846 8.54516 5.4807 7.84839 5.4807 7.00645C5.4807 6.16452 6.17749 5.46774 7.01942 5.46774C7.86136 5.46774 8.55813 6.16452 8.55813 7.00645C8.55813 7.84839 7.91942 8.54516 7.01942 8.54516ZM18.371 18.3H15.7291V14.1484C15.7291 13.1613 15.7001 11.8548 14.3356 11.8548C12.942 11.8548 12.7388 12.9581 12.7388 14.0613V18.3H10.0968V9.73548H12.6807V10.9258H12.7097C13.0872 10.229 13.9291 9.53226 15.2356 9.53226C17.9356 9.53226 18.4291 11.2742 18.4291 13.6548V18.3H18.371Z" />
+          </svg>
+        </a>
+
+        <a class="footer__button" href="#" aria-label="GitHub">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path
+              d="M12 2.24902C6.51613 2.24902 2 6.70064 2 12.249C2 16.6361 4.87097 20.3781 8.87097 21.7329C9.3871 21.8297 9.54839 21.5071 9.54839 21.2813C9.54839 21.0555 9.54839 20.4103 9.51613 19.5393C6.45161 20.0936 5.64516 17.9226 5.64516 17.9226C5.12903 16.4766 4.29032 16.0863 4.29032 16.0863C3.12903 15.3226 4.3871 15.3379 4.3871 15.3379C5.67742 15.4383 6.3871 16.6855 6.3871 16.6855C7.51613 18.5387 9.41935 18.0097 10.0645 17.7387C10.1613 16.9242 10.4839 16.3906 10.8468 16.0898C8.19355 15.7887 5.41935 14.7637 5.41935 10.7726C5.41935 9.50391 5.90323 8.47656 6.67742 7.67188C6.56452 7.37109 6.12903 6.08984 6.79032 4.44629C6.79032 4.44629 7.70968 4.10742 9.51613 5.41797C10.3548 5.16016 11.2581 5.0332 12.1613 5.02539C13.0645 5.0332 13.9677 5.16016 14.8065 5.41797C16.6129 4.10742 17.5323 4.44629 17.5323 4.44629C18.1935 6.08984 17.7581 7.37109 17.6452 7.67188C18.4194 8.47656 18.9032 9.50391 18.9032 10.7726C18.9032 14.7793 16.129 15.7832 13.4677 16.084C13.9677 16.4688 14.3871 17.1777 14.3871 18.2598C14.3871 19.8389 14.3548 20.9375 14.3548 21.2813C14.3548 21.5071 14.5161 21.8457 15.0323 21.7329C19.0323 20.3781 22 16.6361 22 12.249C22 6.70064 17.4839 2.24902 12 2.24902Z" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
 </html>

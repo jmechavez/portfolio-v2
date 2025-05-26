@@ -1,11 +1,10 @@
 .footer {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
   background-color: #26272b;
   padding: 45px 0 20px;
   line-height: 24px;
@@ -18,6 +17,7 @@
   align-items: center;
   list-style: none;
   padding: 0;
+  margin: 0;
   gap: 2em;
 }
 
@@ -25,37 +25,53 @@
   text-decoration: none;
   color: #737373;
   font-size: 14px;
-  transition-duration: 400ms;
-  transition-property: color;
+  transition: color 400ms;
+  position: relative;
 }
 
 .footer__link:hover,
-.header__link:focus {
+.footer__link:focus {
   color: var(--clr-green-light);
+  outline: none;
 }
 
 .footer__link::after {
   content: "";
+  position: absolute;
   pointer-events: none;
   bottom: -2px;
   left: 50%;
-  width: 0%;
+  width: 0;
   height: 2px;
   background-color: var(--clr-green-light);
-  transition-duration: 400ms;
-  transition-property: width, left;
+  transition: width 400ms, left 400ms;
 }
 
 .footer__link:hover::after,
 .footer__link:focus::after {
   width: 100%;
-  left: 0%;
+  left: 0;
+}
+
+.footer__buttons {
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
 }
 
 .footer__button {
-  display: block;
-  
+  background: none;
+  border: none;
+  cursor: pointer;
+  fill: var(--clr-green-dark);
+  width: 40px; /* smaller size than SVG 80 to fit */
+  height: 40px;
+  transition: fill 400ms;
+}
+
+.footer__button:hover,
+.footer__button:focus {
   fill: var(--clr-green-light);
-  width: var(--size-2xl);
-  height: var(--size-2xl);
+  outline: none;
 }
