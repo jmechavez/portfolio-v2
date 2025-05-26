@@ -1,60 +1,92 @@
+/* Improved Breakpoints - Better device coverage */
+/* xs */
+/* @media (min-width: 375px) {} */ /* Large phones */
+
+/* sm */
+/* @media (min-width: 640px) {} */ /* Small tablets */
+
+/* md */
+/* @media (min-width: 768px) {} */ /* Tablets */
+
+/* lg */
+/* @media (min-width: 1024px) {} */ /* Laptops */
+
+/* xl */
+/* @media (min-width: 1280px) {} */ /* Desktops */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */ /* Large desktops */
+
+/* Welcome Section Component */
 .welcome {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: var(--size-lg);
+  margin-top: var(--size-2xl);
+  padding: var(--size-xl) 0;
 }
 
 .welcome__image {
   border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: var(--size-7xl);
+  height: var(--size-7xl);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   cursor: pointer;
+  object-fit: cover;
+  border: 2px solid transparent;
 }
 
 .welcome__image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 12px 30px rgba(77, 104, 55, 0.2);
+  border-color: var(--clr-green-light);
 }
 
 .welcome__subtitle {
   font-size: var(--size-lg);
   color: var(--clr-slate600);
-  line-height: 1.2;
+  line-height: 1.3;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .welcome__title {
   font-size: var(--size-2xl);
-  color: var(--clr-slate400);
+  color: var(--clr-light);
   text-transform: uppercase;
-  letter-spacing: -0.05em;
-  line-height: 1.2;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: var(--size-xs) 0;
 }
 
 .welcome__description {
   font-size: var(--size-md);
-  color: var(--clr-slate600);
+  color: var(--clr-slate400);
   max-width: 60ch;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-.welcome_btn {
+.welcome__btn {
   text-transform: capitalize;
   font-size: var(--size-md);
+  margin-top: var(--size-lg);
 }
 
-/* xs */
-@media (min-width: 475px) {
+/* xs - Large phones (375px+) */
+@media (min-width: 375px) {
   .welcome {
-    gap: 1.5rem;
+    gap: var(--size-xl);
+    padding: var(--size-2xl) 0;
   }
 
   .welcome__image {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: var(--size-8xl);
+    height: var(--size-8xl);
   }
 
   .welcome__subtitle {
@@ -69,23 +101,26 @@
     font-size: var(--size-lg);
   }
 
-  .welcome_btn {
-    text-transform: capitalize;
+  .welcome__btn {
     font-size: var(--size-lg);
   }
 }
 
-/* sm */
-/* @media (min-width: 640px) {} */
+/* sm - Small tablets (640px+) */
+@media (min-width: 640px) {
+  .welcome {
+    gap: var(--size-2xl);
+  }
 
-/* md */
-/* @media (min-width: 768px) {} */
+  .welcome__title {
+    font-size: var(--size-4xl);
+  }
+}
 
-/* lg */
-@media (min-width: 1024px) {
-  .welcome__image {
-    width: 8rem;
-    height: 8rem;
+/* md - Tablets (768px+) */
+@media (min-width: 768px) {
+  .welcome {
+    padding: var(--size-4xl) 0;
   }
 
   .welcome__subtitle {
@@ -98,42 +133,67 @@
 
   .welcome__description {
     font-size: var(--size-xl);
-  }
-
-  .welcome_btn {
-    text-transform: capitalize;
-    font-size: var(--size-xl);
+    max-width: 65ch;
   }
 }
 
-/* xl */
-@media (min-width: 1080px) {
+/* lg - Laptops (1024px+) */
+@media (min-width: 1024px) {
   .welcome {
-    gap: 2rem;
+    gap: var(--size-3xl);
+    padding: var(--size-6xl) 0;
   }
 
   .welcome__image {
-    width: 10rem;
-    height: 10rem;
+    width: var(--size-9xl);
+    height: var(--size-9xl);
   }
 
   .welcome__subtitle {
-    font-size: var(--size-4xl);
+    font-size: var(--size-3xl);
   }
 
   .welcome__title {
-    font-size: var(--size-7xl);
+    font-size: var(--size-6xl);
   }
 
   .welcome__description {
     font-size: var(--size-2xl);
+    max-width: 70ch;
   }
 
-  .welcome_btn {
-    text-transform: capitalize;
+  .welcome__btn {
+    font-size: var(--size-xl);
+  }
+}
+
+/* xl - Desktops (1280px+) */
+@media (min-width: 1280px) {
+  .welcome {
+    gap: var(--size-2xl);
+  }
+
+  .welcome__image {
+    width: var(--size-7xl);
+    height: var(--size-7xl);
+  }
+
+  .welcome__subtitle {
+    font-size: var(--size-2xl);
+  }
+
+  .welcome__description {
+    font-size: var(--size-xl);
+  }
+
+  .welcome__btn {
     font-size: var(--size-2xl);
   }
 }
 
-/* 2xl */
-/* @media (min-width: 1536px) {} */
+/* 2xl - Large desktops (1536px+) */
+@media (min-width: 1536px) {
+  .welcome {
+    padding: var(--size-sm) 0;
+  }
+}

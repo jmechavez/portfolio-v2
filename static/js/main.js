@@ -4,6 +4,8 @@ window.loadStylesheets = function () {
     "/static/css/styles.css",
     "/static/css/components/header.css",
     "/static/css/components/welcome.css",
+    "/static/css/components/about.css",
+    "/static/css/components/footer.css",
     "/static/css/utils.css",
   ];
   stylesheets.forEach((url) => {
