@@ -10,6 +10,8 @@
   line-height: 24px;
   color: #737373;
   gap: 1em;
+  margin-top: var(--size-2xl);
+  padding: var(--size-xl) 0;
 }
 
 .footer__links {
